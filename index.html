@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="utf-8">
-  <title>Батжин — Танилцуулга</title>
-  <style>body {
-  margin:0;
-  font-family:"Times New Roman", Times, serif; 
-  background:#f5f7fb;
-  color:#222;
-  line-height:1.5;
-}za
-    .card{max-width:700px;margin:40px auto;padding:20px;background:#fff;border:1px solid #e6ecf5;border-radius:12px;text-align:center}
-    img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid #ddd;margin-bottom:16px}
-    h1{margin:0 0 8px;font-size:24px;color:#2c3e50}
-    h2{margin:16px 0 8px;font-size:18px;color:#34495e}
-    p{margin:4px 0;color:#555}
+  <meta charset="UTF-8">
+  <title>Нүүр хуудас</title>
+  <style>
+    body { font-family: Arial; margin:0; background:#f7f7f7; }
+    table { border-collapse: collapse; width:100%; height:100vh; }
+    td { border:1px solid #ccc; vertical-align:top; }
+    .header { background:#333; color:#fff; text-align:center; padding:20px; }
+    .nav { background:#eee; text-align:center; padding:10px; }
+    .nav a { margin:0 10px; text-decoration:none; color:#333; }
+    .nav a:hover { color:#0066cc; }
+    .sidebar { width:25%; background:#fafafa; padding:10px; }
+    .content { padding:20px; }
+    .footer { background:#333; color:#fff; text-align:center; padding:10px; }
   </style>
 </head>
 <body>
-  <div class="card">
-  <img src="batjin.png" alt="Батжины зураг" width="180">
-    
-    <h1>Сайн уу?</h1>
-
-    <h2>Сургууль</h2>
-    <p>МУИС – Програм хангамжийн чиглэлээр суралцаж байна.</p>
-
-    <h2>Хобби</h2>
-    <p>Волейбол тоглох, програмчлалын бодлого бодох.</p>
-
-    <h2>Цол зэрэг</h2>
-    <p>Волейболын I зэрэгтэй тамирчин.</p>
-  </div>
+  <table>
+    <tr><td colspan="2" class="header">Миний танилцуулга вэб</td></tr>
+    <tr><td colspan="2" class="nav">
+      <a href="index.html">Нүүр</a> |
+      <a href="about.html">Миний тухай</a> |
+      <a href="family.html">Гэр бүл</a> |
+      <a href="friends.html">Найзууд</a> |
+      <a href="contact.html">Холбоо барих</a>
+    </td></tr>
+    <tr>
+      <td class="sidebar">
+        <h3>Товч</h3>
+        <ul><li>NUM оюутан</li><li>Программ хангамж</li></ul>
+      </td>
+      <td class="content">
+        <h2>Нүүр хуудас</h2>
+        <p>Энд миний вэбсайтын нүүр хуудас байна.</p>
+      </td>
+    </tr>
+    <tr><td colspan="2" class="footer">© 2025 Миний вэб</td></tr>
+  </table>
 </body>
 </html>
+ 
