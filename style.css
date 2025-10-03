@@ -1,0 +1,123 @@
+/* Үндсэн Тохиргоо ба Фонт */
+body {
+    font-family: Arial, sans-serif; /* Үзэмжийг нэмэгдүүлэх фонт */
+    margin: 0; /* Вэбсайтын ирмэгийн зайг тэг болгох */
+    padding: 0;
+    background-color: #f4f4f9; /* Зөөлөн цайвар дэвсгэр өнгө */
+    color: #333; /* Үндсэн текстний өнгө */
+}
+
+/* Header - Толгой Хэсэг */
+header {
+    background-color: #3f51b5; /* Хөх ягаан өнгө (Material Design) */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Сүүдэр нэмэх */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; /* Том харагдуулах */
+}
+
+/* Навигац - Цэс */
+nav ul {
+    list-style: none; /* Тэмдэглэгээг арилгах */
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex; /* Цэсийн элементүүдийг нэг эгнээнд байрлуулах */
+    justify-content: center; /* Төвлөрүүлэх */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Доогуур зурлагыг арилгах */
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s; /* Өнгөний шилжилт */
+}
+
+nav ul li a:hover {
+    background-color: #303f9f; /* Хулгана дээгүүр өнгөрөхөд өөрчлөгдөх өнгө */
+    border-radius: 5px;
+}
+
+/* Main Content - Үндсэн Контент */
+main {
+    padding: 20px;
+    max-width: 1000px; /* Хамгийн их өргөнийг тогтоох */
+    margin: 20px auto; /* Төвлөрүүлэх */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Section - Хэсгүүд */
+section {
+    padding: 30px 0;
+    border-bottom: 1px solid #ddd; /* Хэсгүүдийг ялгах зурвас */
+}
+
+section:last-child {
+    border-bottom: none; /* Хамгийн сүүлийн хэсэгт зурвас хэрэггүй */
+}
+
+section h2 {
+    color: #3f51b5;
+    border-bottom: 2px solid #ff4081; /* Тод ягаан доод зурвас */
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Article - Өгүүллүүд (Түүх хэсэгт) */
+article {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 5px solid #ff4081; /* Тод ягаан талын зурвас */
+    background-color: #fff9f9;
+}
+
+article h3 {
+    color: #555;
+}
+
+/* Genre List - Төрлүүд (Genres) */
+#genres ul {
+    list-style: circle;
+    padding-left: 20px;
+}
+
+#genres ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#genres ul li strong {
+    color: #00796b; /* Ногоон өнгөөр тодотгох */
+}
+
+/* Artist Card - Уран Бүтээлчид */
+.artist-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.artist-card h3 {
+    color: #c51162; /* Улаан ягаан өнгө */
+}
+
+
+/* Footer - Доод Хэсэг */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
