@@ -1,123 +1,142 @@
 /* Үндсэн Тохиргоо ба Фонт */
 body {
-    font-family: Arial, sans-serif; /* Үзэмжийг нэмэгдүүлэх фонт */
-    margin: 0; /* Вэбсайтын ирмэгийн зайг тэг болгох */
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Зөөлөн цайвар дэвсгэр өнгө */
-    color: #333; /* Үндсэн текстний өнгө */
+    background-color: #f7f7f7; /* Нүүр хуудасны background өнгө */
+    color: #333;
+}
+
+/* Бүх хүснэгтийн загварыг нэгтгэх */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    /* border: 1px solid #ccc;  Энэ мөрийг хасаж, border-ийг зөвхөн td-д үлдээв */
+}
+
+td {
+    border: 1px solid #ddd; /* Хөнгөн хил */
+    vertical-align: top;
 }
 
 /* Header - Толгой Хэсэг */
-header {
-    background-color: #3f51b5; /* Хөх ягаан өнгө (Material Design) */
-    color: white;
-    padding: 20px 0;
+.header {
+    background-color: #3f51b5; /* Хөх ягаан өнгө */
+    color: #fff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Сүүдэр нэмэх */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em; /* Том харагдуулах */
-}
-
-/* Навигац - Цэс */
-nav ul {
-    list-style: none; /* Тэмдэглэгээг арилгах */
-    padding: 0;
-    margin: 10px 0 0 0;
-    display: flex; /* Цэсийн элементүүдийг нэг эгнээнд байрлуулах */
-    justify-content: center; /* Төвлөрүүлэх */
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none; /* Доогуур зурлагыг арилгах */
-    padding: 10px 20px;
-    display: block;
-    transition: background-color 0.3s; /* Өнгөний шилжилт */
-}
-
-nav ul li a:hover {
-    background-color: #303f9f; /* Хулгана дээгүүр өнгөрөхөд өөрчлөгдөх өнгө */
-    border-radius: 5px;
-}
-
-/* Main Content - Үндсэн Контент */
-main {
     padding: 20px;
-    max-width: 1000px; /* Хамгийн их өргөнийг тогтоох */
-    margin: 20px auto; /* Төвлөрүүлэх */
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 1.8em;
+    font-weight: bold;
 }
 
-/* Section - Хэсгүүд */
-section {
-    padding: 30px 0;
-    border-bottom: 1px solid #ddd; /* Хэсгүүдийг ялгах зурвас */
+/* Navigation - Цэс */
+.nav {
+    background-color: #e8eaf6; /* Цайвар хөх ягаан */
+    text-align: center;
+    padding: 10px;
 }
 
-section:last-child {
-    border-bottom: none; /* Хамгийн сүүлийн хэсэгт зурвас хэрэггүй */
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3f51b5; /* Цэсийн холбоосын өнгө */
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s;
 }
 
-section h2 {
+.nav a:hover {
+    color: #ff4081; /* Хулгана дээгүүр өнгөрөхөд тод ягаан */
+}
+
+/* Sidebar - Хажуугийн хэсэг */
+.sidebar {
+    width: 25%;
+    min-width: 150px; /* Хамгийн бага өргөн */
+    background-color: #fafafa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h3 {
     color: #3f51b5;
-    border-bottom: 2px solid #ff4081; /* Тод ягаан доод зурвас */
-    display: inline-block;
+    border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
-    margin-bottom: 20px;
 }
 
-/* Article - Өгүүллүүд (Түүх хэсэгт) */
-article {
-    margin-bottom: 25px;
-    padding: 15px;
-    border-left: 5px solid #ff4081; /* Тод ягаан талын зурвас */
-    background-color: #fff9f9;
-}
-
-article h3 {
-    color: #555;
-}
-
-/* Genre List - Төрлүүд (Genres) */
-#genres ul {
-    list-style: circle;
+.sidebar ul {
+    list-style: square;
     padding-left: 20px;
 }
 
-#genres ul li {
-    margin-bottom: 10px;
-    line-height: 1.6;
+/* Content - Агуулга Хэсэг */
+.content {
+    padding: 20px;
+    background-color: white;
 }
 
-#genres ul li strong {
-    color: #00796b; /* Ногоон өнгөөр тодотгох */
+.content h2 {
+    color: #3f51b5;
+    border-bottom: 2px solid #ff4081;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 0;
 }
 
-/* Artist Card - Уран Бүтээлчид */
-.artist-card {
+/* Content доторх Хүснэгт (Гэр бүлийн хуудсан дээрх) */
+.content table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.content th, .content td {
     border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: left;
 }
 
-.artist-card h3 {
-    color: #c51162; /* Улаан ягаан өнгө */
+.content th {
+    background-color: #f1f1f1;
+    color: #333;
 }
-
 
 /* Footer - Доод Хэсэг */
-footer {
+.footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 15px 0;
-    margin-top: 30px;
     font-size: 0.9em;
+}
+
+/* Холбоо Барих Хуудасны Form */
+.content form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.content form input[type="text"],
+.content form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content form button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.content form button:hover {
+    background-color: #c51162;
 }
