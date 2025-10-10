@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TheFacebook — Retro Profile</title>
+<style>
+  /* Retro Facebook 2004 look — table based layout */
+  html,body { margin:0; padding:0; font-family: "Helvetica Neue", Arial, sans-serif; background:#fff; color:#111; }
+  .topbar {
+    background:#2d4f8c; color:#fff; height:72px; display:flex; align-items:center; justify-content:space-between;
+    padding:0 18px; box-sizing:border-box; border-bottom:4px solid #1f3b64;
+  }
+  .topbar h1 { margin:0; font-weight:300; font-size:30px; letter-spacing:1px; font-family: Georgia, "Times New Roman", serif;}
+  .topnav { font-size:14px; }
+  .topnav a { color:#dbe9ff; text-decoration:none; margin-left:14px; }
+  .wrap { width: 980px; margin:18px auto; }
+
+  /* Table layout container */
+  table.layout { width:100%; border-collapse:separate; border-spacing:12px; }
+  td.sidebar { width:200px; vertical-align:top; }
+  td.content { vertical-align:top; }
+
+  /* Left sidebar box style */
+  .box { border:1px solid #cfd9e6; background:#f7f9fc; padding:10px; font-size:14px; }
+  .menu a { display:block; color:#1f3b64; text-decoration:none; padding:6px 0; }
+  .menu a.edit { color:#2d4f8c; font-weight:600; }
+
+  /* Profile main card */
+  .profile-card { border:1px solid #bfcfe6; background:#fff; padding:10px; }
+  .profile-title { background:#e7eefb; border:1px solid #d2def6; padding:6px 8px; font-weight:700; color:#1b3a66; margin-bottom:8px; }
+  .photo { width:320px; height:240px; border:4px solid #dfe8f8; background:#eee; }
+  .photo img { display:block; width:100%; height:100%; object-fit:cover; }
+
+  .info-table { width:100%; border-collapse:collapse; font-size:14px; color:#12283f; }
+  .info-table td.label { width:140px; vertical-align:top; color:#475f7d; padding:6px 8px; font-weight:600; }
+  .info-table td.value { padding:6px 8px; vertical-align:top; }
+
+  .small { font-size:12px; color:#6b7c94; }
+
+  /* Right column boxes */
+  .box-right { border:1px solid #d0dae8; background:#fafbfe; padding:10px; margin-bottom:12px; }
+  .box-right h4 { margin:0 0 6px 0; color:#1f3b64; font-size:15px; }
+
+  /* Footer small */
+  .muted { color:#6d7c96; font-size:12px; }
+  a.button { display:inline-block; background:#2d4f8c; color:#fff; padding:6px 10px; text-decoration:none; border-radius:3px; font-size:13px; margin-top:6px;}
+  @media (max-width:1000px){
+    .wrap { width:94%; }
+    .photo { width:100%; height:220px; }
+    td.sidebar{display:none;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <h1>[ thefacebook ]</h1>
+    <div class="topnav">
+      <a href="#">home</a>
+      <a href="#">search</a>
+      <a href="#">global</a>
+      <a href="#">social net</a>
+      <a href="#">invite</a>
+      <a href="#">faq</a>
+      <a href="#" style="color:#ffdcdc">logout</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <table class="layout">
+      <tr>
+        <!-- Left sidebar (menu) -->
+        <td class="sidebar">
+          <div class="box">
+            <div style="margin-bottom:10px"><input type="text" placeholder="quick search" style="width:100%;padding:6px;box-sizing:border-box"/><button style="margin-top:6px;width:100%;padding:6px;background:#2d4f8c;color:#fff;border:none;">go</button></div>
+            <div class="menu">
+              <a class="edit" href="#">My Profile [ edit ]</a>
+              <a href="#">My Groups</a>
+              <a href="#">My Friends</a>
+              <a href="#">My Messages</a>
+              <a href="#">My Away Message</a>
+              <a href="#">My Mobile Info</a>
+              <a href="#">My Account</a>
+              <a href="#">My Privacy</a>
+            </div>
+          </div>
+
+          <div class="box" style="margin-top:12px">
+            <div class="small"><strong>Connection</strong></div>
+            <div style="margin-top:6px">This is you.</div>
+          </div>
+
+        </td>
+
+        <!-- Main content -->
+        <td class="content">
+          <div class="profile-card">
+            <div class="profile-title">Scott Pearson's Profile (This is you)</div>
+
+            <table style="width:100%; border-collapse:collapse;">
+              <tr>
+                <!-- Photo column -->
+                <td style="width:340px; vertical-align:top;">
+                  <div class="photo">
+                    <!-- Replace 'profile.jpg' with your picture file name -->
+                    <img src="profile.jpg" alt="profile photo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22320%22 height=%22240%22><rect width=%22320%22 height=%22240%22 fill=%22%23e9eef6%22/><text x=%22160%22 y=%22125%22 font-size=%2220%22 font-family=%22Arial%22 fill=%22%236b7c9a%22 text-anchor=%22middle%22>Profile photo</text></svg>';" />
+                  </div>
+
+                  <div style="margin-top:10px; border:1px solid #d6e0f3; background:#f8fbff; padding:8px;">
+                    <a class="button" href="#">Visualize My Friends</a><br/>
+                    <a href="#" style="display:inline-block;margin-top:8px;">Edit My Profile</a><br/>
+                    <a href="#" style="display:inline-block;margin-top:4px;">My Account Preferences</a><br/>
+                    <a href="#" style="display:inline-block;margin-top:4px;">My Privacy Preferences</a>
+                  </div>
+                </td>
+
+                <!-- Info column -->
+                <td style="vertical-align:top; padding-left:12px;">
+                  <div style="border:1px solid #d6e0f3; background:#fff; padding:8px;">
+                    <table class="info-table">
+                      <tr><td class="label">Account Info:</td><td class="value"></td></tr>
+                      <tr><td class="label">Name:</td><td class="value"><strong>Scott Pearson, BS</strong></td></tr>
+                      <tr><td class="label">Member Since:</td><td class="value">January 12, 2005</td></tr>
+                      <tr><td class="label">Last Update:</td><td class="value">February 3, 2005</td></tr>
+
+                      <tr><td class="label">Basic Info:</td><td class="value"></td></tr>
+                      <tr><td class="label">Email:</td><td class="value"><a href="mailto:pearsons2@scranton.edu">pearsons2@scranton.edu</a></td></tr>
+                      <tr><td class="label">Status:</td><td class="value">Alumnus/Alumna</td></tr>
+                      <tr><td class="label">Sex:</td><td class="value">Male</td></tr>
+                      <tr><td class="label">Year:</td><td class="value">2004</td></tr>
+                      <tr><td class="label">Concentration:</td><td class="value">Computing Sciences, Mathematics</td></tr>
+                      <tr><td class="label">Phone:</td><td class="value">570-499-4818</td></tr>
+                      <tr><td class="label">High School:</td><td class="value">Dunmore HS '00</td></tr>
+
+                      <tr><td class="label">Extended:</td><td class="value"></td></tr>
+                      <tr><td class="label">Screenname:</td><td class="value">ScottiePP7</td></tr>
+                      <tr><td class="label">Looking For:</td><td class="value">Friendship, Dating, A Relationship</td></tr>
+                      <tr><td class="label">Interested In:</td><td class="value">Women</td></tr>
+                      <tr><td class="label">Relationship:</td><td class="value">Single</td></tr>
+                      <tr><td class="label">Political Views:</td><td class="value">Liberal</td></tr>
+                    </table>
+                  </div>
+
+                  <div style="margin-top:10px" class="small">
+                    <strong>Interests:</strong> Drinking, Football, Basketball, Tennis...
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Additional right side boxes (under profile) -->
+          <div style="margin-top:12px; display:flex; gap:12px;">
+            <div style="flex:1" class="box-right">
+              <h4>Connection</h4>
+              <p class="muted">Scott is currently logged in from a non-residential location.</p>
+            </div>
+            <div style="width:260px" class="box-right">
+              <h4>Other Schools</h4>
+              <p class="muted">Dunmore HS '00</p>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
