@@ -1,142 +1,35 @@
-/* Үндсэн Тохиргоо ба Фонт */
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7; /* Нүүр хуудасны background өнгө */
-    color: #333;
-}
-
-/* Бүх хүснэгтийн загварыг нэгтгэх */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    /* border: 1px solid #ccc;  Энэ мөрийг хасаж, border-ийг зөвхөн td-д үлдээв */
-}
-
-td {
-    border: 1px solid #ddd; /* Хөнгөн хил */
-    vertical-align: top;
-}
-
-/* Header - Толгой Хэсэг */
-.header {
-    background-color: #3f51b5; /* Хөх ягаан өнгө */
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.8em;
-    font-weight: bold;
-}
-
-/* Navigation - Цэс */
-.nav {
-    background-color: #e8eaf6; /* Цайвар хөх ягаан */
-    text-align: center;
-    padding: 10px;
-}
-
-.nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #3f51b5; /* Цэсийн холбоосын өнгө */
-    font-weight: bold;
-    padding: 5px 0;
-    transition: color 0.3s;
-}
-
-.nav a:hover {
-    color: #ff4081; /* Хулгана дээгүүр өнгөрөхөд тод ягаан */
-}
-
-/* Sidebar - Хажуугийн хэсэг */
-.sidebar {
-    width: 25%;
-    min-width: 150px; /* Хамгийн бага өргөн */
-    background-color: #fafafa;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.sidebar h3 {
-    color: #3f51b5;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-}
-
-.sidebar ul {
-    list-style: square;
-    padding-left: 20px;
-}
-
-/* Content - Агуулга Хэсэг */
-.content {
-    padding: 20px;
+    font-family: "Times New Roman", serif;
     background-color: white;
+    color: black;
+    margin: 20px; /* huree */
 }
 
-.content h2 {
-    color: #3f51b5;
-    border-bottom: 2px solid #ff4081;
-    display: inline-block;
+/*HEADER */
+header {
+    text-align: center; /* Төвд байрлуулах */
+    color:black; /* Монгол тугийн улаан өнгө */
+    margin-bottom: 40px;
+}
+
+/*garchiguud */
+section h2 {
+    color: blue; /* Монгол тугийн хөх өнгө */
+    border-bottom: 1px solid gray; /* Зураглал нэмэх */
     padding-bottom: 5px;
-    margin-top: 0;
 }
 
-/* Content доторх Хүснэгт (Гэр бүлийн хуудсан дээрх) */
-.content table {
-    width: 100%;
-    margin-top: 15px;
-    border-collapse: collapse;
+/*Experience hesgiin text */
+#experience p {
+    margin-left: 20px; /* Зөв байрлал */
 }
-
-.content th, .content td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+/*Skills  */
+ul {
+    list-style-type: square; /* Талст дүрс */
+    margin-left: 20px;
 }
-
-.content th {
-    background-color: #f1f1f1;
-    color: #333;
-}
-
-/* Footer - Доод Хэсэг */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9em;
-}
-
-/* Холбоо Барих Хуудасны Form */
-.content form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.content form input[type="text"],
-.content form textarea {
-    width: 90%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.content form button {
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-.content form button:hover {
-    background-color: #c51162;
+footer {
+    text-align: center; /* huudsnii tuvd */
+    margin-top: 50px;
+    font-size: 12px; /* font size */
 }
