@@ -1,0 +1,35 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: white;
+    color: black;
+    margin: 20px; /* huree */
+}
+
+/*HEADER */
+header {
+    text-align: center; /* Төвд байрлуулах */
+    color:black; /* Монгол тугийн улаан өнгө */
+    margin-bottom: 40px;
+}
+
+/*garchiguud */
+section h2 {
+    color: blue; /* Монгол тугийн хөх өнгө */
+    border-bottom: 1px solid gray; /* Зураглал нэмэх */
+    padding-bottom: 5px;
+}
+
+/*Experience hesgiin text */
+#experience p {
+    margin-left: 20px; /* Зөв байрлал */
+}
+/*Skills  */
+ul {
+    list-style-type: square; /* Талст дүрс */
+    margin-left: 20px;
+}
+footer {
+    text-align: center; /* huudsnii tuvd */
+    margin-top: 50px;
+    font-size: 12px; /* font size */
+}
