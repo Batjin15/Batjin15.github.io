@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Jumbotron Exercise</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar-custom {
+            background-color: #1a1a4d;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .jumbotron-custom {
+            background: linear-gradient(135deg, #1a1a4d 0%, #2d2d7a 100%);
+            color: white;
+            padding: 100px 0 120px 0;
+            margin-bottom: 0;
+        }
+
+        .jumbotron-custom h1 {
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron-custom p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-pink {
+            background-color: #ff0066;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-pink:hover {
+            background-color: #cc0052;
+            color: white;
+        }
+
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section h2 {
+            color: #333;
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background-color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #999;
+        }
+
+        .alert-custom {
+            background-color: #9999bb;
+            border: none;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .messages-card {
+            background-color: #ff0066;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .messages-card .badge {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+
+        .chat-card {
+            background: linear-gradient(135deg, #4a4a8a 0%, #2d2d7a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .chat-card h5 {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .chat-card p {
+            margin-bottom: 20px;
+        }
+
+        .chat-card .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .chat-card .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .chat-card .btn-send {
+            background-color: #ff0066;
+            color: white;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .chat-card a {
+            color: #66ccff;
+            font-size: 0.9rem;
+        }
+
+        .vote-card {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .vote-card h5 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .progress-custom {
+            height: 8px;
+            margin-bottom: 15px;
+            background-color: #e0e0e0;
+        }
+
+        .progress-bar-pink {
+            background-color: #ff0066;
+        }
+
+        .progress-bar-cyan {
+            background-color: #00ffcc;
+        }
+
+        .btn-cool {
+            background-color: #ff0066;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            font-weight: 600;
+            margin-right: 15px;
+        }
+
+        .btn-lame {
+            background-color: white;
+            color: #00ffcc;
+            border: 2px solid #00ffcc;
+            padding: 12px 40px;
+            font-weight: 600;
+        }
+
+        .footer-custom {
+            background-color: #1a1a4d;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-icon"></span>
+                WebJunto
+            </a>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron-custom">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>Welcome to Bootstrap v3.3.7. Check out this awesome jumbotron!</p>
+            <button class="btn btn-pink">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Heading goes here</h2>
+                    <p>Cupcake ipsum dolor sit amet caramels halvah soufflé sugar plum. Fruitcake lollipop tiramisu pastry halvah sweet lemon drops. Jelly beans marshmallow bonbons. Pudding macaroon chocolate cake chups. Tootsie roll wafer jelly beans cotton candy jelly. Liquorice chocolate cake tart jelly. Chocolate pastry liquorice cupcake chocolate.</p>
+
+                    <!-- YouTube Video -->
+                    <div class="video-container">
+                        <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            src="https://youtube.com/shorts/yKt8HXrpPtg?si=tFgu1tx4NV10bMKL" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <!-- Alert -->
+                    <div class="alert alert-custom">
+                        <strong>⚠ Whoa! This is a super important alert!</strong>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Messages Card -->
+                    <div class="messages-card">
+                        <strong>✉ MESSAGES</strong>
+                        <span class="badge">3</span>
+                    </div>
+
+                    <!-- Chat Card -->
+                    <div class="chat-card">
+                        <h5>Welcome Candidate!</h5>
+                        <p>You are a Starfleet Academy candidate. Greet the Captain in a <em>respectful</em> fashion.</p>
+                        <input type="text" class="form-control" placeholder="Input your greeting...">
+                        <button class="btn btn-send">SEND</button>
+                        <div class="text-center mt-3">
+                            <a href="#">I don't watch Star Trek and don't get this reference</a>
+                        </div>
+                    </div>
+
+                    <!-- Vote Card -->
+                    <div class="vote-card">
+                        <h5>Cast your vote! What do you think about space? See vote progress bar below!</h5>
+                        
+                        <div class="progress progress-custom">
+                            <div class="progress-bar progress-bar-pink" style="width: 60%"></div>
+                            <div class="progress-bar progress-bar-cyan" style="width: 40%"></div>
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <button class="btn btn-cool">COOL</button>
+                            <button class="btn btn-lame">LAME</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <p class="mb-0">2017 All Rights Reserved, SomeCompany.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
