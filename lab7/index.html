@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + JS Даалгавар</title>
+</head>
+<body>
+<h2>1. Цифрийн нийлбэр палиндром эсэх</h2>
+<input id="num1" type="number" placeholder="Тоо оруул">
+<button onclick="checkPalindrome()">Шалгах</button>
+<p id="res1"></p>
+
+<h2>2. Чоно туулайг гүйцэх хугацаа</h2>
+<input id="dist" type="number" placeholder="Зай (км)">
+<button onclick="catchTime()">Бодох</button>
+<p id="res2"></p>
+
+<h2>3. Байшингийн байрлал</h2>
+<input id="apt" type="number" placeholder="Тоот оруул">
+<button onclick="findApartment()">Олох</button>
+<p id="res3"></p>
+
+<h2>4. 5 тооны ХБЕХ</h2>
+<input id="arr" type="text" placeholder="5 тоо (таслалаар)">
+<button onclick="findLCM()">Олох</button>
+<p id="res4"></p>
+
+<h2>5. Өглөө / Орой үйлдэл</h2>
+<input id="num5" type="number" placeholder="Тоо оруул">
+<button onclick="calcTime()">Бодох</button>
+<p id="res5"></p>
+
+<script>
+// 1
+function checkPalindrome() {
+  let n = document.getElementById('num1').value;
+  let sum = 0;
+  for (let c of n) sum += Number(c);
+  let s = sum.toString();
+  let rev = s.split('').reverse().join('');
+  document.getElementById('res1').innerText = (s === rev) ? 'Палиндром' : 'Палиндром биш';
+}
+
+// 2
+function catchTime() {
+  let d = Number(document.getElementById('dist').value);
+  let speed = 25 - 18; // км/ц
+  let timeH = d / speed;
+  let totalSec = timeH * 3600;
+  let min = Math.floor(totalSec / 60);
+  let sec = Math.floor(totalSec % 60);
+  document.getElementById('res2').innerText = min + ' минут ' + sec + ' секунд';
+}
+
+// 3
+function findApartment() {
+  let n = Number(document.getElementById('apt').value);
+  let perFloor = 4;
+  let floors = 9;
+  let perEntrance = floors * perFloor;
+  let entrance = Math.ceil(n / perEntrance);
+  let rem = n - (entrance - 1) * perEntrance;
+  let floor = Math.ceil(rem / perFloor);
+  let door = ((rem - 1) % perFloor) + 1;
+  document.getElementById('res3').innerText = entrance + '-р орц, ' + floor + '-р давхар, ' + door + '-р хаалга';
+}
+
+// 4
+function gcd(a, b) {
+  while (b) [a, b] = [b, a % b];
+  return a;
+}
+function lcm(a, b) {
+  return a * b / gcd(a, b);
+}
+function findLCM() {
+  let nums = document.getElementById('arr').value.split(',').map(Number);
+  let res = nums[0];
+  for (let i = 1; i < nums.length; i++) res = lcm(res, nums[i]);
+  document.getElementById('res4').innerText = 'ХБЕХ = ' + res;
+}
+
+// 5
+function calcTime() {
+  let n = Number(document.getElementById('num5').value);
+  let hour = new Date().getHours();
+  let result = hour < 18 ? n * n : Math.sqrt(n);
+  document.getElementById('res5').innerText = 'Хариу: ' + result;
+}
+</script>
+</body>
+</html>
