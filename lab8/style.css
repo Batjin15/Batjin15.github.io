@@ -1,0 +1,124 @@
+/* Бүх элементүүдэд үндсэн фонт, өнгөний тохиргоог хийх */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Зөөлөн саарал дэвсгэр */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Цэнхэр өнгөөр гарчиг өгөх */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* ДЭГЖЛҮҮРИЙГ АГУУЛАГЧ ХЭСЭГ */
+.hangman-container {
+    margin-bottom: 20px;
+    /* Canvas-ийг голд байрлуулахын тулд */
+    display: flex; 
+    justify-content: center;
+}
+
+/* Canvas-д хүрээ өгөх (илүү тод харагдуулахын тулд) */
+#hangmanCanvas {
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+/* ТОГЛООМЫН МЭДЭЭЛЭЛ */
+.question-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.answer-display {
+    font-size: 2em;
+    letter-spacing: 15px; /* Үсгүүдийн хоорондох зайг нэмэгдүүлэх */
+    margin-bottom: 30px;
+    font-family: 'Courier New', monospace; /* Нууц үгийг илүү тод харагдуулах */
+}
+
+/* ЭХЛЭХ ТОВЧНЫ ЗАГВАР */
+.start-button {
+    background-color: #28a745; /* Ногоон өнгө */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+.start-button:hover {
+    background-color: #1e7e34;
+}
+
+/* ҮСГИЙН ДЭГЖЛҮҮР (KEYBOARD) */
+.keyboard {
+    display: flex;
+    flex-wrap: wrap; /* Үсгүүд олон мөрөнд хуваагдах боломжтой */
+    gap: 8px; /* Товчнуудын хоорондох зай */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.letter-button {
+    background-color: #007bff; /* Цэнхэр товч */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s, opacity 0.1s;
+    width: 40px; /* Товчны өргөнийг тогтмол байлгах */
+}
+
+.letter-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Таасан/Ашигласан үсгүүдийн загвар */
+.letter-button:disabled {
+    background-color: #6c757d; /* Саарал */
+    color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Мэссежний загвар */
+.message {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    min-height: 20px; /* Зайг тогтмол байлгах */
+}
+
+.message.win {
+    color: #28a745; /* Ногоон - Хожсон */
+}
+
+.message.lose {
+    color: #dc3545; /* Улаан - Алдсан */
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дүүжлүүр Тоглоом (Hangman Game) - Интернет Технологийн Үндэс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Интернет Технологийн Үндэс - Дүүжлүүр Тоглоом</h1>
+
+        <div class="hangman-container">
+            <canvas id="hangmanCanvas" width="200" height="250"></canvas>
+        </div>
+
+        <div class="game-info">
+            <p id="questionDisplay" class="question-text">Тоглоом эхлэхийг дарна уу...</p>
+
+            <div id="answerDisplay" class="answer-display"></div>
+
+            <p id="messageDisplay" class="message"></p>
+        </div>
+
+        <button id="startButton" class="start-button">
+            Тоглоом Эхлэх
+        </button>
+
+        <div id="keyboard" class="keyboard">
+            </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
